@@ -1,0 +1,561 @@
+/* Project Name : Bengali restaurant website sing html and pure css(*no framework)
+Projct path : H:\WEB DEVS\0C WEB PROJECTS\OC(B)-WEB PROJECT(02)\HTML\index.html 
+*/
+
+/* font family : font-family: 'Poppins', sans-serif; */
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+/* ########## REBOOTING CSS PROPERTIES ############ */
+
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html{
+    font-size: 62.5%;
+}
+body{
+    font-family: 'Poppins', sans-serif;;
+    /* background-color: black; */
+
+}
+
+/* ############# UTILITY CLASSES  ################## */
+.container{
+    max-width: 1200px;
+    width: 90%;
+    margin: auto;
+    /* background-color: black; */
+}
+
+.btn{
+    display: inline-block;
+    text-decoration: none;
+    padding: 1em 2.5em;
+    border-radius: 50px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 500;
+
+}
+
+.btn-primary{
+    background-color: cadetblue;
+    color: white;
+}
+/* ############   NAVBAR STYLING   ############## */
+/* for desktop mode */
+
+.navbar input[type="checkbox"],
+.navbar .hamburger-lines{
+    display: none;
+}
+
+.navbar{
+    /* box-shadow: 0px 10px 30px rgba(88, 16, 16, 0.486); */
+    /* box-shadow: 0px 5px 10px rgba(170, 170, 170, 0.575); */
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.753);
+    /* position: fixed; */
+    width: 100%;
+    color: gray;
+    opacity: 0.85;
+    /* opacity: 2; */
+    /* height: 64px; */
+    z-index: 100;
+    background-color: black;
+}
+.navbar-container{
+    display: flex;
+    justify-content: space-between;
+    /* height: 64px; */
+    text-align: center;
+    padding: 10px;
+    
+
+}
+
+.menu-items{
+    order: 2;
+    display: flex; 
+
+    /* border: 2px solid red; */
+    /* border-radius: 30px; */
+    margin-bottom: 10px;
+    
+    /* background-color: rgba(0, 0, 0, 0.753); */
+}
+.menu-items li {
+    /* border: 2px solid red ; */
+    list-style:none;
+    margin-left: 1.5rem;
+    margin-top: 1rem;
+    font-size: 1.8rem;
+}
+.logo{
+    order: 1;
+    /* font-size: 3rem; */
+    font-size: 3rem;
+    /* padding: 1rem; */
+    border: 2px solid rgb(240, 238, 238);
+    color: skyblue;
+    padding-left: 3px;
+    padding-right: 3px;
+    border-radius: 50%;
+}
+
+.navbar a{
+    color: rgb(243, 242, 242);
+    text-decoration:none;
+    font-weight: 500;
+    transition:all 1s ease-in-out;
+}
+.navbar a:hover{
+    color: rgba(248, 244, 0, 0.925);
+    /* text-shadow:2px 2px 40px black; */
+}
+
+/* #########   SHOWCASE STYLING    ############ */
+
+
+#showcase{
+    /* background-image: url(../IMG/showcase-img01.jpg); */
+    /* background-image:linear-gradient(rgba(240,240,240,0.144),rgba(255,255,255,0.336)) ,url(../IMG/pots-vegetables-harvest.jpg); */
+    background-image: url(../IMG/pots-vegetables-harvest.jpg);
+    /* box-shadow: 10px 10px 60px rgba(56, 51, 51, 0.61); */
+    height: 50vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.showcase-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+    height: 100%;
+    color: #fff;
+    margin-bottom: 5px;
+}
+.showcase-container h1{
+    /* margin-bottom: 10px; */
+}
+
+/* ########## ABOUT US CSS STYLING ############ */
+#about{
+    padding: 50px 0xpx;
+    background-color: rgba(0, 0, 0, 0.836);
+}
+
+.about-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#about h2{
+    font-size: 3.2rem;
+    color: rgba(255, 255, 255, 0.637);
+}
+#about p{
+    font-size: 1.6rem;
+    color: cornsilk;
+}
+#about .small{
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: rgba(247, 216, 177, 0.74);
+}
+.about-img{
+    flex:1 1 400px;
+    padding: 30px;
+    /* border: 2px solid red; */
+    transform: translateX(150%);
+    animation: about-img-animation 1s ease-in forwards;
+}
+@keyframes about-img-animation{
+    100%{
+        transform: translateX(0);
+    }
+}
+
+
+.about-text{
+    flex:1 1 400px;
+    padding: 30px;
+    margin: auto;
+    /* color: white; */
+    transform: translateX(-150%);
+    animation: about-text-animation 1s ease-in forwards;
+}
+@keyframes about-text-animation{
+    100%{
+        transform: translateX(0);
+    }
+}
+
+
+.about-img img{
+    display: block;
+    max-width: 100%;
+    margin: auto;
+    height: 400px;
+    object-fit: cover;
+    object-position: right;
+}
+
+
+
+/* ##############  FOOD CATAGORY (CSS STYLING)     ############## */
+
+#food{
+    padding: 5rem 0 10rem 0;
+    background-color: rgba(0, 0, 0, 0.712);
+}
+#food h2{
+    text-align: center;
+    font-weight: 400;
+    font-size: 3rem;
+    margin-bottom: 40px;
+    color: white;
+}
+.food-container{
+    display:flex;
+    justify-content: space-around;
+}
+
+.food-container img{
+    display: block;
+
+    /* width: 100%;
+    height: 300px; */
+    width: 430px;
+    height: 300px;
+
+    margin:auto;
+    object-fit: cover;
+    object-position: center;
+    max-height: 400px;
+}
+
+.img-container{
+    margin:0 1rem;
+    position: relative;
+    
+}
+
+.img-content{
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    text-align: center;
+
+    transform: translate(-50%,-50%);
+    opacity: 0;
+    z-index: 2;
+    color: white;
+
+    transition: all 0.3s ease-in-out;
+}
+
+.img-content h3{
+    font-size: 3rem;
+    font-weight: 400;
+    /* margin-bottom: 10px; */
+}
+
+
+.img-container::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    /* right: 0;
+    bottom: 0; */
+
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.726);
+    z-index: 1;
+
+    transform: scaleY(0);
+    transform-origin:100% 100%;
+    transition: all 0.3s ease-in-out;
+   
+}
+
+.img-container:hover::after{
+    transform: scaleY(1);
+    opacity: 1;
+}
+.img-content:hover::after{
+    opacity: 1;
+}
+
+.img-container:hover .img-content{
+    top: 50%;
+    opacity: 1;
+}
+
+.img-content a:hover{
+    color: rgb(53, 51, 38);
+    box-shadow:  2px 2px 5px rgba(0, 0, 0, 0.521);
+    font-weight: 600;
+}
+.food-type{
+    margin-bottom: 10px;
+}
+
+
+/* ############        FOOD MENU CSS STYLING   ############### */
+#food-menu{
+    background-color: rgba(15, 14, 14, 0.836);
+    color: rgb(255, 255, 255);
+}
+.food-menu-heading{
+    text-align: center;
+    font-size: 4rem;
+    /* padding-top: 10px; */
+    font-weight: 400;
+
+}
+.food-menu-container{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 50px 0px 30px 0;
+}
+
+.food-menu-container img{
+    display: block;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+
+    /* border: 2px solid red; */
+    /* box-shadow: .5px .5px 10px rgba(255, 255, 255, 0.699); */
+}
+.food-menu-item{
+    display:flex;
+    /* border: 2px solid red; */
+    flex: 1 1 600px;
+    justify-content: space-evenly;
+    margin-bottom: 3rem;
+    margin: auto;
+}
+.food-menu-item .food-description{
+    margin: auto 1.5rem;
+}
+
+.food-description .food-title{
+    font-size: 2rem;
+    color:skyblue;
+    margin-bottom: .3rem;
+}
+
+.food-description p{
+    color: whitesmoke;
+    margin-bottom: .2rem;
+    font-size: 1.5rem;
+}
+.food-description .food-price{
+    color: rgb(13, 212, 13);
+}
+
+.food-menu-heading .top-items-fm{
+    text-align: center;
+    font-size: 1.6rem;
+    color: darkturquoise;
+}
+
+.detailed-menu-list{
+    text-align: center;
+    padding: .5rem;
+    /* border: 2px solid red ; */
+}
+.detailed-menu-list a{
+    text-decoration: none;
+    /* display: inline-block; */
+    color: rgb(56, 238, 0);
+    font-size: 1.4rem;
+    font-weight: 300;
+    /* background-color: black; */
+
+    transition: color .2s ease-in-out;
+}
+.detailed-menu-list a:hover{
+    color: rgb(0, 204, 255);
+    
+}
+
+
+
+/* ############    TESTIMONIAL CSS STYLING     ######### */
+
+#testimonial{
+    padding: 5rem 0rem;
+    background-color: rgba(0, 0, 0, 0.705);
+}
+
+
+.testimonial-title{
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 400;
+    color:rgb(26, 237, 252);
+}
+
+.testimonial-text{
+    color:white;
+
+}
+
+.testimonial-container{
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.6rem;
+    padding: 1rem;
+}
+
+.testimonial-container .checked{
+    color: gold;
+}
+
+.testimonial-box .testimonial-text{
+    margin: 1rem 0;
+
+}
+
+.testimonial-box {
+    padding: 1rem;
+    text-align: center;
+}
+
+.customer-details img{
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+
+}
+.customer-name{
+    color:rgba(245, 244, 240, 0.904);
+}
+
+
+/* ###########     CONTACT US CSS STYLING  ############ */
+#contact{
+    padding: 5rem 0;
+    background-color: rgba(0, 0, 0, 0.822);
+
+}
+
+.contact-container{
+    display: flex;
+}
+
+.contact-img{
+    width: 50%;
+}
+.contact-img img{
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+}
+
+.contact-form{
+    margin: auto;
+    padding: 1rem;
+    /* border: 2px solid red; */
+    /* background: rgb(7,25,121);
+background: linear-gradient(90deg, rgba(7,25,121,1) 0%, rgba(2,0,36,1) 27%, rgba(0,212,255,1) 78%); */
+
+background-color: rgba(0, 0, 0, 0.74);
+}
+.contact-form h2{
+    font-size: 2.3rem;
+    text-align: center;
+    color: rgba(247, 250, 252, 0.918);
+}
+
+.contact-form input{
+    
+    /* background: rgb(7,25,121);
+background: linear-gradient(90deg, rgba(7,25,121,1) 0%, rgba(2,0,36,1) 27%, rgba(0,212,255,1) 78%); */
+
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid rgb(255, 255, 255);
+    padding: 1rem 0;
+    /* margin-left: 1rem; */
+    margin-bottom: 1rem;
+    outline: none;
+    font-weight: 500;
+    background-color: rgba(0, 0, 0, 0.74);
+    color: white;
+    /* border-radius: 20px; */
+    box-shadow: none;
+
+}
+
+
+.contact-form textarea{
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid white;
+    outline: none;
+    background-color: rgba(0, 0, 0, 0.74);
+    color: white;
+}
+
+.contact-form a{
+    font-size: 1rem;
+    margin-left: 300px;
+    margin-top: 10px;
+
+}
+.contact-form a:hover{
+    color: rgb(0, 255, 55);
+}
+
+/* ############    FOOTER CSS STYLING  ######### */
+#footer{
+    background-color: rgb(22, 19, 19);
+}
+.footer01 p{
+    text-align: center;
+    color: white;
+    padding: 5px;
+}
+.social-icon{
+    text-align: center;
+    word-spacing: 40px;
+    padding-bottom: 10px;
+    color: whitesmoke;
+
+}
+.social-icon .fb01:hover{
+    color: blue;
+}
+.social-icon .ins01:hover{
+    color: coral;
+}
+.social-icon .tw01:hover{
+    color: skyblue;
+}
+
